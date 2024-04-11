@@ -48,7 +48,7 @@
 
   # Enable the Pantheon Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.pantheon.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -101,6 +101,7 @@
     git
     curl
     wezterm
+    jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
