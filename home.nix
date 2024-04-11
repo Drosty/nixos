@@ -43,6 +43,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".config/nvim".source = dotfiles/nvim;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -89,8 +90,10 @@
     extraConfig = ":luafile ~/.config/nvim/init.lua";
   };
 
-  home.file."./.config/nvim/" = {
-    source = ./dotfiles/nvim;
-    recursive = true;
-  };
+ # home.file."nvim" = {
+ #   target = "../.config/nvim";
+ #   # source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/dotfiles/nvim";
+ #   source = ../.dotfiles/dotfiles/nvim;
+ #   recursive = true;
+ # };
 }
