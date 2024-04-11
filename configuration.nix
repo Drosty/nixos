@@ -92,6 +92,7 @@
     packages = with pkgs; [
       firefox
       neovim
+      nodejs
     #  thunderbird
     ];
   };
@@ -104,10 +105,13 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    gcc
     git
     curl
     wezterm
     jetbrains-mono
+    fzf
+    wakatime
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
