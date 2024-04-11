@@ -75,4 +75,11 @@
     enableBashIntegration = true;
     extraConfig = builtins.readFile ./dotfiles/wezterm/wezterm.lua;
   };
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      ll = "ls -l";
+    };
+  };
 }
