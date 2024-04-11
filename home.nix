@@ -69,10 +69,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-#  programs.wezterm = {
-#    enabled = true;
-#    enableZshIntegration = true;
-#    enableBashIntegration = true;
-#    extraConfig = builtins.readfile ./dotfile/wezterm/wezterm.lua;
-#  }
+  programs.wezterm = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
+    extraConfig = builtins.readFile ./dotfile/wezterm/wezterm.lua;
+  };
 }
