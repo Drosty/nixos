@@ -24,6 +24,10 @@
 		      inherit pkgs;
 		      modules = [ ./home.nix ];
 	      };
+        ryandrost = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./home-darwin.nix ];
+        };
       };
     };
   }
