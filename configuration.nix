@@ -91,6 +91,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
+      neovim
     #  thunderbird
     ];
   };

@@ -80,6 +80,17 @@
     enable = true;
     shellAliases = {
       ll = "ls -l";
+      vim = "nvim";
     };
+  };
+
+  programs.neovim = {
+    enable = true;
+    extraConfig = ":luafile ~/.config/nvim/init.lua";
+  };
+
+  home.file."./.config/nvim/" = {
+    source = ./dotfiles/nvim;
+    recursive = true;
   };
 }
