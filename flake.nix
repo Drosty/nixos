@@ -9,23 +9,22 @@
 
   outputs = {self, nixpkgs, home-manager, ...}:
     let
-      system = "x86_64-linux";
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations = {
-        chasenixos = lib.nixosSystem {
-          inherit system;
+        chasenixos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
           modules = [ ./configuration.nix ];
         };
       };
       homeConfigurations = {
 	      ryan = home-manager.lib.homeManagerConfiguration {
-		      inherit pkgs;
-		      modules = [ ./home.nix ];
+          # lib = nixpkgs.lib;
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          modules = [ ./home.nix ];
 	      };
         ryandrost = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          # lib = nixpkgs.lib;
+          pkgs = nixpkgs.legacyPackages."aarch64-darwin";
           modules = [ ./home-darwin.nix ];
         };
       };
