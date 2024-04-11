@@ -1,4 +1,4 @@
-[200~-- Pull in the wezterm API
+-- Pull in the wezterm API
 local wezterm = require("wezterm")
 local act = wezterm.action
 
@@ -47,4 +47,4 @@ config.keys = {
 }
 
 -- and finally, return the configuration to wezterm
--- return config
+return config
