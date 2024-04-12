@@ -78,7 +78,7 @@
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
-    extraConfig = builtins.readFile ./dotfiles/wezterm/wezterm.lua;
+    extraConfig = builtins.readFile ./apps/wezterm/wezterm.lua;
   };
 
   programs.zsh = {
