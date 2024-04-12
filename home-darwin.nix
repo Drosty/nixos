@@ -6,7 +6,7 @@
   home.username = "ryandrost";
   home.homeDirectory = "/Users/ryandrost";
 
-  imports = [ ./apps/nvim.nix ];
+  imports = [ ./apps/nvim/nvim.nix ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

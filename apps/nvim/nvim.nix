@@ -3,7 +3,7 @@
 
  programs.neovim = {
     enable = true;
-    extraLuaConfig = builtins.readFile ./apps/options.lua;
+    extraLuaConfig = builtins.readFile ./options.lua;
 
 #     extraConfig = builtins.readFile ../nvim_copy/init.vim;
 #    plugins = with pkgs.vimPlugins;
