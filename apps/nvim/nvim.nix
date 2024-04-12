@@ -10,7 +10,7 @@
       in [
         {
           plugin = alpha-nvim;
-          type = lua;
+          type = "lua";
           config = builtins.readFile(./alpha.lua);
         }
     #    vim-nix
