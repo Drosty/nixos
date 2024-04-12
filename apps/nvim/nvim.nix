@@ -5,14 +5,18 @@
     enable = true;
     extraLuaConfig = builtins.readFile ./options.lua;
 
-#     extraConfig = builtins.readFile ../nvim_copy/init.vim;
-#    plugins = with pkgs.vimPlugins;
-#      let
-#      in [
-#        vim-nix
-#        gruvbox-community
-#        nvim-tree-lua
-#        nvim-web-devicons
-#      ];
+    plugins = with pkgs.vimPlugins;
+      let
+      in [
+        {
+          plugin = alpha-nvim;
+          type = lua;
+          config = builtins.readFile(./alpha.lua);
+        }
+    #    vim-nix
+    #    gruvbox-community
+    #    nvim-tree-lua
+    #    nvim-web-devicons
+      ];
   }; 
 }
