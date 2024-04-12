@@ -8,16 +8,21 @@
     let
       in [
       {
+        plugin = onedark-nvim;
+        type = "lua";
+        config = builtins.readFile(./onedark.lua);
+      }
+      {
         plugin = alpha-nvim;
         type = "lua";
         config = builtins.readFile(./alpha.lua);
       }
       {
-        plugin = onedark-nvim;
+        plugin = nvim-treesitter;
         type = "lua";
-        config = builtins.readFile(./onedark.lua);
+        config = builtins.readFile(./treesitter.lua);
       }
-#    vim-nix
+
 #    gruvbox-community
 #    nvim-tree-lua
 #    nvim-web-devicons
